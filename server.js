@@ -35,7 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const allowedOrigins = [
   "http://192.168.5.116:5173", "http://136.239.248.62:5173", "http://127.0.0.1:5173", "http://127.0.0.1", "http://136.239.248.62", "https://ap.earist.edu.ph", "http://ap.earist.edu.ph"
-  ,"http://192.168.50.36:5173",
+  ,"http://192.168.50.36:5173", "http:localhost:5173"
 ]; 
 
 app.use(
