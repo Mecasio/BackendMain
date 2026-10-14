@@ -12,7 +12,7 @@ const getDbHost = () => {
 
 //MYSQL CONNECTION FOR ADMISSION
 const db = mysql.createPool({
-  host: getDbHost(),
+  host: process.env.DB_HOST_LOCAL,
   port: process.env.DB_PORT || 3306,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -23,7 +23,7 @@ const db = mysql.createPool({
 });
 
 const db3 = mysql.createPool({
-  host: getDbHost(),
+  host: process.env.DB_HOST_LOCAL,
   port: process.env.DB_PORT || 3306,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -32,6 +32,7 @@ const db3 = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0,
 });
+
 
 // ✅ EXPORT BOTH
 let pageAccessPermissionColumnsReady;
